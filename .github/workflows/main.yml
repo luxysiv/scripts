@@ -13,14 +13,14 @@ jobs:
       - name: get
         run: bash script-get.sh
 
-    - name: Generate date
-      run: echo "DATE=$(date +%F )" >> $GITHUB_ENV
+      - name: Generate date
+        run: echo "DATE=$(date +%F )" >> $GITHUB_ENV
   
-    - name: Commit userscript 
-      uses: EndBug/add-and-commit@v9.1.1
-      with:
-        add: *.js
-        default_author: github_actor 
-        message: 'Cập nhật script: ${{ env.DATE }}'
-        push: true
+      - name: Commit userscript 
+        uses: EndBug/add-and-commit@v9.1.1
+        with:
+          add: *.js
+          default_author: github_actor 
+          message: 'Cập nhật script: ${{ env.DATE }}'
+          push: true
 
