@@ -24,3 +24,6 @@ jobs:
          message: 'Cập nhật script: ${{ env.DATE }}'
          push: true
 
+permissions: 
+
+   contents: write
