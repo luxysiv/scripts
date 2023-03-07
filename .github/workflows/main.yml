@@ -1,9 +1,10 @@
 name: Build
 on:
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+  schedule:
+
+   - cron: "10 * * * *"
+
 jobs:
   build:
     runs-on: ubuntu-latest
